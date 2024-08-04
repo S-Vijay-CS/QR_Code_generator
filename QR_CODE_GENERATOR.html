@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Document</title>
+</head>
+<body>
+    <img src="" alt="">
+    <input type="text">
+    <button>GENERATE</button>
+
+
+    <script>
+        const image = document.querySelector('img'), 
+        input = document.querySelector('input'),
+        button = document.querySelector('button'),
+        api = `https://api.qrserver.com/v1/`,
+        api2 = `create-qr-code/?size=150*150&data=`;
+
+        button.addEventListener('click',()=>{
+            image.src =`${api}${api2}${input.value}`;
+        });
+
+    </script>
+    
+</body>
+</html>
